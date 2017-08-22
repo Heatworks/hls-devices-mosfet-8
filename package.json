@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Heatworks/hls-devices-mosfet-8/issues"
   },
-  "homepage": "https://github.com/Heatworks/hls-devices-mosfet-8#readme"
+  "homepage": "https://github.com/Heatworks/hls-devices-mosfet-8#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
 }
