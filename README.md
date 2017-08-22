@@ -26,4 +26,10 @@ Begin by running node red, this generates the flow files. Copy the new flows fro
 
 ### Add this Repo
 
-Add this repo setup environment variables and run `npm start`.
+Clone this repo and setup environment variables.
+
+```
+NODE_RED_CRED_FILE
+NODE_RED_FLOW_FILE
+NODE_RED_SETTINGS_FILE
+```
