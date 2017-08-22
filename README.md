@@ -24,6 +24,6 @@ sudo npm install -g node-red
 
 Begin by running node red, this generates the flow files. Copy the new flows from this file.
 
+### Add this Repo
 
-{"$":"219e6941f7d9f4322cf3be0f19eebd438HG1VquqeSO2LSyPou0lElIfHvJagCQFyktEqZ9HI78UzOVNImivfd5NLuWg2r19loGWB0OkKQTaW5CTSw=="
-"key": "tLBr}MlQ3s1g[dr4sO!#4l&"}
+Add this repo setup environment variables and run `npm start`.
