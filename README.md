@@ -31,7 +31,7 @@ Clone this repo and setup environment variables in `/home/pi/profile`.
 ```
 export NODE_RED_CRED_FILE=/home/pi/.node-red/flows_default_cred.json
 export NODE_RED_FLOW_FILE=/home/pi/.node-red/flows_default.json
-export NODE_RED_SETTINGS_FILE=/home/pi/.node-red/settings.json
+export NODE_RED_SETTINGS_FILE=/home/pi/.node-red/settings.js
 ```
 
 ### CronTab
