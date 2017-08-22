@@ -26,10 +26,14 @@ Begin by running node red, this generates the flow files. Copy the new flows fro
 
 ### Add this Repo
 
-Clone this repo and setup environment variables.
+Clone this repo and setup environment variables in `/home/pi/profile`.
 
 ```
-NODE_RED_CRED_FILE
-NODE_RED_FLOW_FILE
-NODE_RED_SETTINGS_FILE
+export NODE_RED_CRED_FILE=/home/pi/.node-red/flows_default_cred.json
+export NODE_RED_FLOW_FILE=/home/pi/.node-red/flows_default.json
+export NODE_RED_SETTINGS_FILE=/home/pi/.node-red/settings.json
 ```
+
+### CronTab
+
+Open crontab `crontab -e` and add this line `@reboot bash /home/pi/hls-devices-mosfet-8/startup.sh > /home/pi/startup.log 2>&1`.
