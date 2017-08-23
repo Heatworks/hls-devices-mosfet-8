@@ -52,4 +52,6 @@ sudo chown pi:pi /var/log/node-red.log
 3. Change host name from `hls-device-mosfet-8-unknown` to whatever you want. This can be done by running `sudo su && echo "hls-device-mosfet-8-c" > /etc/h 
 ostname` echoing your desired hostname.
 4. Reboot to see changes. (`reboot`)
-5. Run setup script `cd ~/hls-devices-mosfet-8/ && bash setup.sh` and answer prompts.
+5. Get latest setup script `cd /home/pi/hls-devices-mosfet-8/ && git pull`.
+6. Run setup script `cd /home/pi/hls-devices-mosfet-8/ && bash setup.sh` and answer prompts.
+7. Reboot to see changes. (`reboot`)
