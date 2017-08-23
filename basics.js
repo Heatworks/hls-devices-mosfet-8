@@ -30,7 +30,8 @@ module.exports = {
     },
     updateFlowFile: function(organization, deviceName) {
         var data = fs.readFileSync('flow.json', 'utf-8');
-        var newValue = data.replace(/\/organizations\/heatworks\/devices\/mosfet8\/unknown/gim, `/organizations/${organization}/devices/${deviceName}` );            
-        fs.writeFileSync(process.env.NODE_RED_FLOW_FILE, data, 'utf-8');
+        var newValue = data.replace(/\/organizations\/heatworks\/devices\/mosfet8\/unknown/gim, `/organizations/${organization}/devices/${deviceName}` ); 
+        var newValue = newValue.replace(/\"mosfet8\/unknown\"/gim, `"${deviceName}"` );                    
+        fs.writeFileSync(process.env.NODE_RED_FLOW_FILE, newValue, 'utf-8');
     }
 }

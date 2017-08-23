@@ -37,3 +37,19 @@ export NODE_RED_SETTINGS_FILE=/home/pi/.node-red/settings.js
 ### CronTab
 
 Open crontab `crontab -e` and add this line `@reboot bash /home/pi/hls-devices-mosfet-8/startup.sh > /home/pi/startup.log 2>&1`.
+
+### Create Log File
+
+```
+sudo touch node-red.log
+sudo chown pi:pi /var/log/node-red.log 
+```
+
+## Setup
+
+1. Connect via UART with username `pi` and password `hls-default`.
+2. Change default password from `hls-default` to whatever you want. This can be done using `sudo raspi-config` and pressing enter.
+3. Change host name from `hls-device-mosfet-8-unknown` to whatever you want. This can be done by running `sudo su && echo "hls-device-mosfet-8-c" > /etc/h 
+ostname` echoing your desired hostname.
+4. Reboot to see changes. (`reboot`)
+5. Run setup script `cd ~/hls-devices-mosfet-8/ && bash setup.sh` and answer prompts.

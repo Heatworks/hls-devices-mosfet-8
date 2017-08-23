@@ -2,6 +2,7 @@ var crypto = require("crypto");
 var fs = require("fs")
 
 var getNodeREDSecurityKey = require("./basics.js").getNodeREDSecurityKey
+var updateFlowFile = require("./basics.js").updateFlowFile
 
 function decryptNodeRED() {
     var key = getNodeREDSecurityKey();
@@ -16,4 +17,6 @@ function decryptNodeRED() {
     return JSON.parse(decrypted)
 }
 
-console.log(JSON.stringify(decryptNodeRED()));
+//console.log(JSON.stringify(decryptNodeRED()));
+
+//console.log(updateFlowFile('heatworks', 'mosfet8/unknown2'));
