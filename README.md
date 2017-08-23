@@ -55,3 +55,9 @@ ostname` echoing your desired hostname.
 5. Get latest setup script `cd /home/pi/hls-devices-mosfet-8/ && git pull`.
 6. Run setup script `cd /home/pi/hls-devices-mosfet-8/ && bash setup.sh` and answer prompts.
 7. Reboot to see changes. (`reboot`)
+
+## Future
+
+- Don't use default password. Consider using raspberry pi's default which leaves a reminder to change it each time one signs in.
+- Include password and host name changes in the prompt setup script.
+- Run setup through UART.
