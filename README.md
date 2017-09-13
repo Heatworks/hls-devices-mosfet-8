@@ -47,14 +47,15 @@ sudo chown pi:pi /var/log/node-red.log
 
 ## Setup
 
-1. Connect via UART with username `pi` and password `hls-default`.
-2. Change default password from `hls-default` to whatever you want. This can be done using `sudo raspi-config` and pressing enter.
-3. Change host name from `hls-device-mosfet-8-unknown` to whatever you want. This can be done by running `sudo su && echo "hls-device-mosfet-8-c" > /etc/h 
+1. Connect via UART with username `pi` and password `raspberry`.
+2. Change default password from `raspberry` to whatever you want. This can be done using `sudo raspi-config` and pressing enter or running `passwd`.
+3. Change host name from `hls-device-mosfet-8-unknown` to whatever you want. This can be done by running `sudo su && echo "hls-device-mosfet-8-a" > /etc/h 
 ostname` echoing your desired hostname.
-4. Reboot to see changes. (`reboot`)
-5. Get latest setup script `cd /home/pi/hls-devices-mosfet-8/ && git pull`.
-6. Run setup script `cd /home/pi/hls-devices-mosfet-8/ && bash setup.sh` and answer prompts.
-7. Reboot to see changes. (`reboot`)
+4. (optional) Enable SSH either through `raspi-config` or running `systemctl enable ssh.socket`.
+5. Reboot to see changes. (`reboot`)
+6. Get latest setup script `cd /home/pi/hls-devices-analog-8/ && git pull`.
+7. Run setup script `cd /home/pi/hls-devices-analog-8/ && bash setup.sh` and answer prompts.
+8. Reboot to see changes. (`reboot`)
 
 ## Future
 
