@@ -47,7 +47,7 @@ sudo chown pi:pi /var/log/node-red.log
 
 ## Setup
 
-1. Connect via UART with username `pi` and password `raspberry`.
+1. Connect via UART with username `pi` and password `raspberry`. (Note: an older version of this setup may use `hls-default` as the password)
 2. Change default password from `raspberry` to whatever you want. This can be done using `sudo raspi-config` and pressing enter or running `passwd`.
 3. Change host name from `hls-device-mosfet-8-unknown` to whatever you want. This can be done by running `sudo su && echo "hls-device-mosfet-8-a" > /etc/h 
 ostname` echoing your desired hostname.
