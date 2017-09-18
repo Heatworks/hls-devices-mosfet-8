@@ -1,6 +1,17 @@
 # HLS Devices - Mosfet8
 Code and setup instructions for the HSL Mosfet8 Board.
 
+## Setup
+
+1. Connect via UART with username `pi` and password `raspberry`. (Note: an older version of this setup may use `hls-default` as the password)
+2. Change default password from `raspberry` to whatever you want. This can be done by running `passwd` or using `raspi-config`.
+3. Change host name from `hls-device-mosfet-8-unknown` to whatever you want. This can be done by running `sudo su && echo "hls-device-mosfet-8-unknown" > /etc/hostname` filling in your desired hostname.
+4. (optional) Enable SSH either through `raspi-config` or running `systemctl enable ssh.socket`.
+5. Reboot to see changes. (`sudo reboot`)
+6. Get latest setup script `cd /home/pi/hls-devices-mosfet-8/ && git pull`.
+7. Run setup script `cd /home/pi/hls-devices-mosfet-8/ && bash setup.sh` and answer prompts.
+8. Reboot to see changes. (`sudo reboot`)
+
 ## Base Image
 The following are the instructions for creating the base image for the Mosfet8 board, using a copy of this image will contain all the following edits. Begin with the default raspbian lite image.
 
@@ -46,18 +57,6 @@ Open crontab `crontab -e` and add this line `@reboot bash /home/pi/hls-devices-m
 sudo touch node-red.log
 sudo chown pi:pi /var/log/node-red.log 
 ```
-
-## Setup
-
-1. Connect via UART with username `pi` and password `raspberry`. (Note: an older version of this setup may use `hls-default` as the password)
-2. Change default password from `raspberry` to whatever you want. This can be done using `sudo raspi-config` and pressing enter or running `passwd`.
-3. Change host name from `hls-device-mosfet-8-unknown` to whatever you want. This can be done by running `sudo su && echo "hls-device-mosfet-8-a" > /etc/h 
-ostname` echoing your desired hostname.
-4. (optional) Enable SSH either through `raspi-config` or running `systemctl enable ssh.socket`.
-5. Reboot to see changes. (`reboot`)
-6. Get latest setup script `cd /home/pi/hls-devices-mosfet-8/ && git pull`.
-7. Run setup script `cd /home/pi/hls-devices-mosfet-8/ && bash setup.sh` and answer prompts.
-8. Reboot to see changes. (`reboot`)
 
 ## Future
 
