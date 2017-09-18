@@ -14,19 +14,21 @@ General updates, node, and npm.
 sudo apt-get update
 sudo apt-get install node npm git
 
-sudo n 6.* 
 sudo npm cache clean -f
 sudo npm install -g n
+sudo n 6.* 
 sudo npm install -g node-red
 ```
 
 ### Node-Red
 
-Begin by running node red, this generates the flow files. Copy the new flows from this file.
+Begin by running node red, this generates the flow and settings files.
+
+Edit `~/.node-red/settings.js` and change the `flowFile` option to `flows_default.json`.
 
 ### Add this Repo
 
-Clone this repo and setup environment variables in `/home/pi/profile`.
+Clone this repo and setup environment variables in `/home/pi/.profile`.
 
 ```
 export NODE_RED_CRED_FILE=/home/pi/.node-red/flows_default_cred.json
@@ -53,8 +55,8 @@ sudo chown pi:pi /var/log/node-red.log
 ostname` echoing your desired hostname.
 4. (optional) Enable SSH either through `raspi-config` or running `systemctl enable ssh.socket`.
 5. Reboot to see changes. (`reboot`)
-6. Get latest setup script `cd /home/pi/hls-devices-analog-8/ && git pull`.
-7. Run setup script `cd /home/pi/hls-devices-analog-8/ && bash setup.sh` and answer prompts.
+6. Get latest setup script `cd /home/pi/hls-devices-mosfet-8/ && git pull`.
+7. Run setup script `cd /home/pi/hls-devices-mosfet-8/ && bash setup.sh` and answer prompts.
 8. Reboot to see changes. (`reboot`)
 
 ## Future
