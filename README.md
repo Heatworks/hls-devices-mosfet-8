@@ -33,7 +33,7 @@ sudo npm install -g node-red
 
 ### Node-Red
 
-Begin by running node red, this generates the flow and settings files.
+Begin by running node red `node-red`, this generates the flow and settings files.
 
 Edit `~/.node-red/settings.js` and change the `flowFile` option to `flows_default.json`.
 
@@ -54,12 +54,11 @@ Open crontab `crontab -e` and add this line `@reboot bash /home/pi/hls-devices-m
 ### Create Log File
 
 ```
-sudo touch node-red.log
+sudo touch /var/log/node-red.log
 sudo chown pi:pi /var/log/node-red.log 
 ```
 
 ## Future
 
-- Don't use default password. Consider using raspberry pi's default which leaves a reminder to change it each time one signs in.
 - Include password and host name changes in the prompt setup script.
 - Run setup through UART.
