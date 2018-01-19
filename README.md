@@ -35,7 +35,7 @@ sudo npm install -g node-red
 
 Begin by running node red `node-red`, this generates the flow and settings files.
 
-Edit `~/.node-red/settings.js`. Change the `flowFile` option to `flows_default.json` and remove the `credentialSecret` property.
+Edit `~/.node-red/settings.js`. Change the `flowFile` option to `flows_default.json` and remove the `credentialSecret` value.
 
 
 ### Add this Repo
@@ -63,6 +63,7 @@ sudo chown pi:pi /var/log/node-red.log
 
 - Run `cd /home/pi/hls-devices-mosfet-8/ && bash setup.sh` and use default values.
 - Check for errors in `/var/log/node-red.log`.
+- May need to remove `~/.node-red/.config.json` file as it may have automatically generated credentials.
 
 ## Future
 
